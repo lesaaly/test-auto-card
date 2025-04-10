@@ -1,0 +1,16 @@
+:root {
+  --font-family: "Roboto Flex", sans-serif;
+  --second-family: "Roboto Mono", sans-serif;
+  --white: #FFFFFF;
+}
+
+body {
+  margin: 32px 24px;
+  background-color: #F5F5F5;
+}
+
+@media (max-width: 500px) {
+  body {
+    margin: 16px;
+  }
+}

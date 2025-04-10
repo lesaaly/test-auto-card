@@ -1,0 +1,215 @@
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(8px);
+  background: rgba(6, 6, 21, 0.5);
+  -webkit-backdrop-filter: blur(8px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modalContent {
+  width: 920px;
+  height: 928px;
+  background-color: #fff;
+  border-radius: 32px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.modalHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 39px 32px;
+}
+
+.modalTitle {
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 86%;
+  letter-spacing: -0.01em;
+  color: #00071e;
+}
+
+.closeButton {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.paramsContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-bottom: 24px;
+}
+
+.separator {
+  border-bottom: 1px solid #00071e;
+  width: 100%;
+  opacity: 0.1;
+  margin-bottom: 24px;
+}
+
+.modalBody {
+  overflow-y: auto;
+  height: 100%;
+  padding-left: 32px;
+  padding-right: 32px;
+}
+
+.modalFooter {
+  padding: 32px;
+}
+
+.hideButton {
+  border-radius: 10000px;
+  padding: 36px 32px;
+  background-color: #060615;
+  color: #fff;
+  border: none;
+  width: 100%;
+  font-family: var(--second-family);
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 100%;
+  text-transform: uppercase;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.hideButton:hover {
+  background-color: #1a1a1a;
+}
+
+.paramsTitle {
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 136%;
+  letter-spacing: -0.01em;
+  color: #00071e;
+  opacity: 0.4;
+}
+
+.paramsText {
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 136%;
+  letter-spacing: -0.01em;
+  color: #00071e;
+}
+
+@media (max-width: 500px) {
+  .modal {
+    display: block;
+    align-items: flex-start;
+    overflow-y: auto;
+  }
+
+  .modalContent {
+    width: 100%;
+    height: auto;
+    justify-content: flex-start;
+  }
+
+  .modalBody {
+    flex: 1;
+    overflow-y: visible;
+    height: auto;
+  }
+
+  .modalFooter {
+    padding: 16px 24px 24px 24px;
+  }
+
+  .closeButton {
+    display: none;
+  }
+
+  .modalTitle {
+    font-size: 20px;
+  }
+
+  .modalHeader {
+    padding: 24px 24px 32px 24px;
+  }
+
+  .paramsTitle {
+    font-size: 14px;
+  }
+
+  .paramsText {
+    font-family: var(--second-family);
+    font-size: 16px;
+    line-height: 116%;
+    letter-spacing: -0.02em;
+  }
+
+  .paramsContainer {
+    margin-bottom: 16px;
+  }
+
+  .separator {
+    margin-bottom: 16px;
+  }
+
+  .paramsView {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .paramsViewTitle {
+    margin-bottom: 8px;
+  }
+
+  .paramsMobileText {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .buttonClose {
+    display: flex !important;
+    position: sticky;
+    z-index: 1001;
+    top: 24px;
+  }
+}
+
+.buttonClose {
+  display: none;
+  border-radius: 1000px;
+  padding: 20px;
+  width: 119px;
+  height: 56px;
+  background: #e2e6fd;
+  font-family: var(--second-family);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 100%;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+  color: #2b5aff;
+  border: none;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 24px;
+  margin-left: 16px;
+  margin-bottom: 16px;
+}

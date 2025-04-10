@@ -1,0 +1,151 @@
+.mainContainer {
+  column-gap: 8px;
+  border-radius: 32px;
+  height: 288px;
+  background: #00071e;
+  position: relative;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 695px 1fr;
+  padding: 48px;
+  box-sizing: border-box;
+  margin-bottom: 220px;
+
+  &:hover {
+    cursor: pointer;
+    background: #e2e6fd;
+    transition: background 0.3s ease;
+
+    .title,
+    .pickUpCarText {
+      color: #2b5aff;
+      transition: color 0.3s ease;
+    }
+
+    .button {
+      background: #2b5aff;
+      color: #fff;
+      transition: background 0.3s ease, color 0.3s ease;
+    }
+
+    .arrowRight {
+      filter: brightness(0) invert(1);
+      transition: filter 0.3s ease;
+    }
+  }
+}
+
+.title {
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 64px;
+  line-height: 96%;
+  letter-spacing: -0.06em;
+  text-transform: uppercase;
+  color: #fff;
+  margin-bottom: 16px;
+}
+
+.car {
+  position: absolute;
+  bottom: 18px;
+  left: 54%;
+  transform: translateX(-50%);
+}
+
+.button {
+  border-radius: 10000px;
+  padding: 36px 32px;
+  width: 438px;
+  height: 92px;
+  background: var(--white);
+  border: none;
+  cursor: pointer;
+  font-family: var(--second-family);
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 100%;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+  color: #00071e;
+}
+
+.arrowRight {
+  padding-left: 8px;
+}
+
+.buttonContainer {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+.pickUpCarText {
+  font-family: var(--second-family);
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 136%;
+  letter-spacing: -0.01em;
+  color: #fff;
+  opacity: 0.6;
+}
+
+@media (max-width: 500px) {
+  .mainContainer {
+    display: flex;
+    flex-direction: column;
+    height: 406px;
+    padding: 32px 24px 24px 24px;
+    margin-bottom: 8px;
+    position: relative;
+  }
+
+  .title {
+    font-family: var(--second-family);
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 100%;
+    text-transform: uppercase;
+    color: #fff;
+    margin-bottom: 8px;
+  }
+
+  .pickUpCarText {
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 140%;
+    letter-spacing: -0.01em;
+    color: #fff;
+    margin-bottom: 16px;
+  }
+
+  .button {
+    width: 100%;
+    height: 68px;
+    padding: 20px;
+    margin-top: 24px;
+    font-family: var(--second-family);
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 100%;
+    letter-spacing: -0.02em;
+    text-transform: uppercase;
+    color: #00071e;
+  }
+
+  .car {
+    position: relative;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 279px;
+    text-align: center;
+  }
+
+  .car img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+}

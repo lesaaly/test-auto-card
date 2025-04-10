@@ -1,0 +1,336 @@
+.infoContainer {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 8px;
+}
+
+.descriptionText {
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 136%;
+  letter-spacing: -0.01em;
+  color: rgba(0, 7, 30, 0.3);
+}
+
+.descriptionValue {
+  font-family: var(--second-family);
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 116%;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+  color: #00071e;
+}
+
+.titleDescription {
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 116%;
+  letter-spacing: -0.01em;
+  text-transform: uppercase;
+  color: #00071e;
+}
+
+.descriptionContainer,
+.complectationContainer {
+  padding: 32px;
+  border-radius: 32px;
+  background-color: var(--white);
+}
+
+.complectationContainer {
+  margin-top: 8px;
+}
+
+.price {
+  font-weight: 700;
+  font-size: 64px;
+  line-height: 96%;
+  letter-spacing: -0.01em;
+  text-transform: uppercase;
+  color: #00071e;
+  margin-bottom: 32px;
+  font-family: var(--font-family);
+  text-align: start;
+  border-bottom: 1px solid rgba(0, 6, 28, 0.1);
+  padding-bottom: 32px;
+  margin-bottom: 32px;
+}
+
+.equipmentText {
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 136%;
+  letter-spacing: -0.01em;
+  color: #00071e;
+}
+
+.viewEquip {
+  margin-top: 32px;
+  display: grid;
+  grid-template-columns: 292px 582px;
+  margin-bottom: 24px;
+}
+
+.separator {
+  border-bottom: 1px solid rgba(0, 6, 28, 0.1);
+}
+
+.allParamsButton {
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--second-family);
+  font-weight: 500;
+  border-radius: 10000px;
+  padding: 36px 32px;
+  height: 92px;
+  background: #00071e;
+  color: var(--white);
+  font-size: 20px;
+  line-height: 100%;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+  justify-content: center;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+  border: none;
+  width: 100%;
+}
+
+.allParamsButton:hover {
+  opacity: 0.8;
+}
+
+.safEquip {
+  margin-top: 24px;
+  display: grid;
+  grid-template-columns: 292px 582px;
+  margin-bottom: 48px;
+}
+
+.buttonsContainerContact {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding-bottom: 32px;
+  z-index: 100;
+}
+.buttonContact,
+.buttonContactTelegram {
+  border-radius: 10000px;
+  padding: 36px 32px;
+  background: #2b59ff;
+  width: 344px;
+  border: none;
+  cursor: pointer;
+  font-family: var(--second-family);
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 100%;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+  color: var(--white);
+
+  &:hover {
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+  }
+}
+
+.buttonContactTelegram {
+  background: #e2e6fd;
+  color: #2b5aff;
+}
+
+.sameCarsContainer {
+  margin-top: 32px;
+  margin-bottom: 221px;
+  position: relative;
+}
+
+.buttonCatalog {
+  font-family: var(--second-family);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 100%;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+  color: #2b5aff;
+  border-radius: 1000px;
+  padding: 20px;
+  background: #e2e6fd;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border: none;
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+  }
+}
+
+.title {
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 110%;
+  letter-spacing: -0.01em;
+  text-transform: uppercase;
+  text-align: start;
+  color: #00071e;
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.newModel {
+  border-radius: 1000px;
+  padding: 20px;
+  box-sizing: border-box;
+  width: 99px;
+  background: #2b5aff;
+  font-family: var(--second-family);
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 100%;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+  color: #fff;
+  text-align: center;
+}
+
+.specifications {
+  margin-top: 24px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 16px;
+  row-gap: 24px;
+}
+
+@media (max-width: 500px) {
+  .container {
+    margin-top: 64px;
+  }
+
+  .infoContainer {
+    display: flex;
+    flex-direction: column;
+    row-gap: 8px;
+  }
+
+  .viewEquip,
+  .safEquip {
+    margin-top: 16px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 16px;
+  }
+
+  .safEquip {
+    margin-bottom: 24px;
+  }
+
+  .sameCarsContainer {
+    margin-bottom: 36px;
+    margin-top: 32px;
+  }
+
+  .buttonsContainerContact {
+    flex-direction: column;
+    position: relative;
+    padding: 0;
+  }
+
+  .buttonContact,
+  .buttonContactTelegram {
+    width: 100%;
+  }
+
+  .complectationContainer {
+    margin-right: -16px;
+    margin-left: -16px;
+    padding: 24px;
+  }
+
+  .allParamsButton {
+    padding: 24px;
+    height: 68px;
+    font-size: 20px;
+  }
+
+  .titleDescription {
+    font-size: 24px;
+  }
+
+  .descriptionText {
+    font-size: 14px;
+  }
+
+  .equipmentText {
+    font-size: 16px;
+    letter-spacing: -0.02em;
+    padding-top: 8px;
+  }
+
+  .pt-8 {
+    padding-top: 8px;
+  }
+
+  .descriptionContainer {
+    margin-right: -16px;
+    margin-left: -16px;
+    padding: 24px;
+  }
+
+  .price {
+    font-size: 32px;
+    line-height: 116%;
+    padding-bottom: 24px;
+    margin-bottom: 24px;
+  }
+
+  .specifications {
+    margin-top: 16px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 8px;
+  }
+
+  .descriptionValue {
+    font-size: 16px;
+    line-height: 136%;
+    letter-spacing: -0.02em;
+  }
+
+  .title {
+    font-family: var(--second-family);
+    font-size: 20px;
+    color: #00071e;
+  }
+
+  .newModel {
+    padding: 16px;
+    font-size: 12px;
+    width: 82px;
+  }
+
+  .titleText {
+    width: 57%;
+  }
+
+  .buttonCatalog {
+    margin-top: 24px;
+  }
+}
